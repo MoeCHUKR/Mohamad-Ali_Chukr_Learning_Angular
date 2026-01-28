@@ -1,0 +1,11 @@
+.content-item {
+  border: 2px solid #000;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+img {
+  display: block;
+  max-width: 200px;
+  margin-bottom: 10px;
+}

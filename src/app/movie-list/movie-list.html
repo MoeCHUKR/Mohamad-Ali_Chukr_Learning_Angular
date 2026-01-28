@@ -1,0 +1,7 @@
+@for (item of contentList; track item.id) {
+  <app-movie-list-item
+    [title]="item.title"
+    [description]="item.description"
+    [category]="item.category">
+  </app-movie-list-item>
+}
