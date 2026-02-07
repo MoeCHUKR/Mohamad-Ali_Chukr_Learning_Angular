@@ -1,3 +1,10 @@
+@if (featured) {
+  <app-movie-list-item
+    [title]="featured.title"
+    [description]="featured.description"
+    [category]="featured.category">
+  </app-movie-list-item>
+}
+
 <app-movie-list></app-movie-list>
 
-<textarea>Movies here</textarea>
