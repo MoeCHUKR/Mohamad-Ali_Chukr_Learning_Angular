@@ -1,10 +1,7 @@
-@if (featured) {
-  <app-movie-list-item
-    [title]="featured.title"
-    [description]="featured.description"
-    [category]="featured.category">
-  </app-movie-list-item>
-}
+<mat-toolbar>
+  <a routerLink="/movies" routerLinkActive="active">Home</a>
+  <span style="flex: 1 1 auto;"></span>
+  <a routerLink="/modify" routerLinkActive="active">Modify List Item</a>
+</mat-toolbar>
 
-<app-movie-list></app-movie-list>
-
+<router-outlet></router-outlet>

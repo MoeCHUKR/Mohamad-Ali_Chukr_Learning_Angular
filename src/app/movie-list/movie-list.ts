@@ -17,8 +17,8 @@ export class MovieList implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getAll().subscribe({
-      next: (data) => (this.contentList = data),
-      error: (err) => console.error(err)
+      next: (data: IContent[]) => (this.contentList = data),
+      error: (err: unknown) => console.error(err)
     });
   }
 }

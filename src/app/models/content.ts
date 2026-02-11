@@ -1,6 +1,7 @@
 export interface IContent {
-  id: number | string;
+  id: number;
   title: string;
   description: string;
   category: string;
+  imageUrl: string;
 }

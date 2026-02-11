@@ -1,5 +1,13 @@
 <div class="content-item">
   <h2>{{ title }}</h2>
+
+  <img
+    [ngSrc]="imageUrl"
+    width="300"
+    height="180"
+    alt="{{ title }}"
+  />
+
   <p>{{ description }}</p>
   <p><strong>Category:</strong> {{ category }}</p>
 </div>

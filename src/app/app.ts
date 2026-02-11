@@ -1,25 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { MovieList } from './movie-list/movie-list';
-import { MovieListItemComponent } from './movie-list-item/movie-list-item';
-import { IContent } from './models/content';
-import { MovieService } from './services/movie';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MovieListItemComponent, MovieList],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatToolbarModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit {
-  featured?: IContent;
-
-  constructor(private movieService: MovieService) {}
-
-  ngOnInit(): void {
-    this.movieService.read(2).subscribe({
-      next: (data) => (this.featured = data),
-      error: (err) => console.error(err)
-    });
-  }
-}
+export class App {}
